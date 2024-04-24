@@ -10,4 +10,4 @@ Este repositório contém os trabalhos da disciplina de Organização de Computa
 - [Códigos para o Multiciclo](Trabalho%201/Multiciclo)
 - [Códigos para o Pipeline](Trabalho%201/Pipeline)
 
-# Trabalho 2
+### Trabalho 2
