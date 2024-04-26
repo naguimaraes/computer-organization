@@ -23,14 +23,14 @@ Na implementação com 5 estágios de pipeline, o ciclo de instrução é dividi
 
 O projeto está organizado da seguinte forma: cada pasta representa uma das versões do processador, dentro da qual estão os arquivos referentes a ele. Os arquivos são:
 
-- `MEM_Data`: Este arquivo representa a memória de dados do processador.
+- `MEM_Data`: Memória de dados do processador.
 
-- `MEM_Instruction`: Este arquivo representa a memória de instruções do processador.
+- `MEM_Instruction`: Memória de instruções do processador.
 
-- `Control_ROM`: Este arquivo representa a ROM de controle do processador.
+- `Control_ROM`: ROM de controle do processador.
 (Somente para a versão Pipeline)  
 
-- Arquivos com a extensão `.circ`: Estes arquivos representam o processador em si e podem ser abertos no software Logisim. Eles contêm a implementação da microarquitetura do processador MIPS, incluindo as novas instruções implementadas neste trabalho.
+- Arquivos com a extensão `.circ`: Implementação do datapath do processador em si, para serem abertos no software Logisim.
 
 Fora das pastas, estão também os arquivos:
 
