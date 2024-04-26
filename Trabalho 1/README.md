@@ -21,7 +21,7 @@ Na implementação com 5 estágios de pipeline, o ciclo de instrução é dividi
 
 ## Estrutura do Projeto
 
-O projeto está organizado da seguinte forma:
+O projeto está organizado da seguinte forma: cada pasta representa uma das versões do processador, dentro da qual estão os arquivos referentes a ele. Os arquivos são:
 
 - `MEM_Data`: Este arquivo representa a memória de dados do processador.
 
@@ -31,6 +31,12 @@ O projeto está organizado da seguinte forma:
 (Somente para a versão Pipeline)  
 
 - Arquivos com a extensão `.circ`: Estes arquivos representam o processador em si e podem ser abertos no software Logisim. Eles contêm a implementação da microarquitetura do processador MIPS, incluindo as novas instruções implementadas neste trabalho.
+
+Fora das pastas, estão também os arquivos:
+
+- `testbench-logisim.asm`: Assembly para testar as instruções adicionadas. Este código irá executar somente no simulador Logisim, pois pressupõe que os dados e as instruções começam no endereço `0x00000000`.
+
+- `testbench-mars.asm`: Assembly para testar as instruções adicionadas. Este código irá executar somente no simulador MARS, pois pressupõe que os dados começam no endereço `0x00001001` e que as instruções começam no endereço `0x00400000`.
 
 ## Instruções Implementadas
 
