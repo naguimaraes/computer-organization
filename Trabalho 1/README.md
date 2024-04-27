@@ -34,9 +34,11 @@ O projeto está organizado da seguinte forma: cada pasta representa uma das vers
 
 Fora das pastas, estão também os arquivos:
 
-- `testbench-logisim.asm`: Assembly para testar as instruções adicionadas. Este código irá executar somente no simulador Logisim, pois pressupõe que os dados e as instruções começam no endereço `0x00000000`.
+- `testbench-logisim.asm`: Assembly para testar as instruções adicionadas. Este código irá executar somente no simulador Logisim, pois pressupõe que os dados e as instruções estão em memórias diferentes, com ambos começando no endereço `0x00000000`.
 
-- `testbench-mars.asm`: Assembly para testar as instruções adicionadas. Este código irá executar somente no simulador MARS, pois pressupõe que os dados começam no endereço `0x00001001` e que as instruções começam no endereço `0x00400000`.
+- `testbench-mars.asm`: Assembly para testar as instruções adicionadas. Este código irá executar somente no simulador MARS, pois pressupõe que os dados começam no endereço `0x00001001` (.data) e que as instruções começam no endereço `0x00400000` (.text).
+
+- `testbench-multiciclo.asm`: Assembly para testar as instruções adicionadas somente no processador multiciclo, pois pressupõe que as instruções e os dados compartilham a mesma memória. As instruções começam no endereço `0x00000000` e convencionamos que os dados começam no endereço `0x000000a0`.
 
 ## Instruções Implementadas
 
