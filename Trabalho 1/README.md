@@ -2,63 +2,31 @@
 
 Este trabalho tem como objetivo implementar novas instruções na microarquitetura do processador MIPS. O processador MIPS é uma arquitetura de conjunto de instruções reduzido (RISC) amplamente utilizada em sistemas embarcados e computadores pessoais.
 
-<!-- TODO: adicionar imagens -->
 ## Implementações do Processador
 
-Existem três implementações diferentes do processador MIPS: monociclo, multiciclo e com 5 estágios de pipeline. Cada uma dessas implementações possui características distintas em termos de desempenho e complexidade.
-
-### Monociclo
-
-Na implementação monociclo, cada instrução é executada em um único ciclo de clock. Isso significa que todas as etapas do ciclo de instrução (busca, decodificação, execução, acesso à memória e escrita no registrador) são realizadas em um único ciclo. Embora seja simples de entender e implementar, essa abordagem pode ser ineficiente em termos de desempenho, pois algumas instruções podem levar mais tempo para serem executadas do que outras.
-
-### Multiciclo
-
-Na implementação multiciclo, cada instrução é dividida em várias etapas, e cada etapa é executada em um ciclo de clock separado. Isso permite que diferentes instruções sejam executadas em diferentes quantidades de ciclos, dependendo da complexidade da instrução. Essa abordagem melhora o desempenho em relação à implementação monociclo, pois permite uma melhor utilização dos recursos do processador. No entanto, a implementação multiciclo é mais complexa de projetar e implementar.
-
-### Pipeline (de 5 estágios)
-
-Na implementação com 5 estágios de pipeline, o ciclo de instrução é dividido em cinco estágios: busca de instrução, decodificação, execução, acesso à memória e escrita no registrador. Cada estágio é executado em um ciclo de clock separado, e várias instruções podem ser executadas simultaneamente em diferentes estágios do pipeline. Isso permite uma execução mais eficiente das instruções e um melhor desempenho em comparação com as implementações monociclo e multiciclo. No entanto, a implementação com pipeline também introduz desafios adicionais, como dependências de dados e hazards de pipeline.
-
-## Estrutura do Projeto
-
-O projeto está organizado da seguinte forma: cada pasta representa uma das versões do processador, dentro da qual estão os arquivos referentes a ele. Os arquivos são:
-
-- `MEM_Data`: Memória de dados do processador.
-
-- `MEM_Instruction`: Memória de instruções do processador.
-
-- `Control_ROM`: ROM de controle do processador.
-(Somente para a versão Pipeline)  
-
-- Arquivos com a extensão `.circ`: Implementação do datapath do processador em si, para serem abertos no software Logisim.
-
-Fora das pastas, estão também os arquivos:
-
-- `testbench-logisim.asm`: Assembly para testar as instruções adicionadas. Este código irá executar somente no simulador Logisim, pois pressupõe que os dados e as instruções estão em memórias diferentes, com ambos começando no endereço `0x00000000`.
-
-- `testbench-mars.asm`: Assembly para testar as instruções adicionadas. Este código irá executar somente no simulador MARS, pois pressupõe que os dados começam no endereço `0x00001001` (.data) e que as instruções começam no endereço `0x00400000` (.text).
-
-- `testbench-multiciclo.asm`: Assembly para testar as instruções adicionadas somente no processador multiciclo, pois pressupõe que as instruções e os dados compartilham a mesma memória. As instruções começam no endereço `0x00000000` e convencionamos que os dados começam no endereço `0x000000a0`.
+Existem três implementações diferentes do processador MIPS: [monociclo](./Monociclo/README.md), [multiciclo](./Multiciclo/README.md) e com 5 estágios de [pipeline](./Pipeline/README.md). Suas implementações e particularidades podem ser encontradas clicando nos links.
 
 ## Instruções Implementadas
 
-Neste trabalho, foram implementadas as seguintes novas instruções:
-
 <!-- TODO: adicionar as descrições -->
-1. Instrução 1: Descrição da instrução 1.
+### 1. SRA (Shift Right Arithmetic)
 
-2. Instrução 2: Descrição da instrução 2.
+O deslocamento aritmético é uma operação que move todos os bits de um valor para a direita, preenchendo os bits mais significativos com o valor do bit de sinal original. Isso significa que, se o bit mais significativo (bit de sinal) for 1, ele será replicado para a direita durante o deslocamento. Se o bit de sinal for 0, zeros serão inseridos à direita.
 
-3. Instrução 3: Descrição da instrução 3.
+A sintaxe da instrução SRA segue o formato `SRA $dest, $src, sa`, onde:
 
-## Como Executar o Projeto
+- `$dest` é o registrador de destino onde o resultado do deslocamento será armazenado.
+- `$src` é o registrador de origem que contém o valor a ser deslocado.
+- `sa` é o valor de deslocamento, especificado como um número inteiro.
 
-Para executar o projeto, siga as etapas abaixo:
+Aqui está um exemplo de uso da instrução SRA: `SRA $1, $2, 3`
 
-1. Abra o software Logisim.
+Neste exemplo, o valor contido no registrador `$2` será deslocado aritmeticamente para a direita em `3` posições, e o resultado será armazenado no registrador `$1`.
 
-2. Carregue o arquivo `.circ` correspondente à implementação do processador.
+É importante observar que o deslocamento aritmético à direita é usado principalmente para realizar divisões por potências de 2. Por exemplo, um deslocamento aritmético à direita de 1 é equivalente a uma divisão por 2, um deslocamento de 2 é equivalente a uma divisão por 4 e assim por diante.
 
-3. Carregue todos os arquivos de memória contidos na pasta do respectivo processador.
+### 2. Descrição da instrução 2
 
-4. Execute o programa e observe o comportamento do processador com as novas instruções implementadas.
+### 3. Descrição da instrução 3
+
+### 4. Descrição da instrução 4
