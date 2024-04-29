@@ -4,7 +4,7 @@ Este trabalho tem como objetivo implementar novas instruções na microarquitetu
 
 ## Implementações do Processador
 
-Existem três implementações diferentes do processador MIPS: [monociclo](./Monociclo/README.md), [multiciclo](./Multiciclo/README.md) e com 5 estágios de [pipeline](./Pipeline/README.md). Suas implementações e particularidades podem ser encontradas clicando nos links.
+Existem três implementações diferentes do processador MIPS: [monociclo](./Monociclo), [multiciclo](./Multiciclo) e com 5 estágios de [pipeline](./Pipeline). Suas implementações e particularidades podem ser encontradas clicando nos links.
 
 ## Instruções Implementadas
 
