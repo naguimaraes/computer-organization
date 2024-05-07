@@ -65,8 +65,18 @@ inicio:
 	nop
 	nop
 	nop
-	# LUI $1, 0X00000001 # R1 <- 1 * 2^16
-	# SW $1, 12($0) 	   # MEM($0 + 12) <- 65.536
+	LUI $1, 0X00000001 # R1 <- 1 * 2^16
+	nop
+	nop
+	nop
+	nop
+	nop
+	SW $1, 12($0) 	   # MEM($0 + 12) <- 65.536
+	nop
+	nop
+	nop
+	nop
+	nop
 	J inicio
 LB1:
 	SW $3, 12($0)
