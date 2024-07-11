@@ -12,14 +12,23 @@ inicio:
 	SW $1, 640($0) 	   # MEM($0 + 640) <- 65.536
 	LW $2, 644($0)
 	LW $3, 648($0)
+	BGEZAL $1, teste_bgezal
+	J erro
+teste_bgezal:
 	SRA $3, $3, 4
 	SW $3, 648($0)
 	ADD $3, $1, $2
 	SUB $3, $3, $2
-	BEQ $3, $1 LB1
 	SW $0, 648($0)
+	JAL teste_jal
+	J erro
+teste_jal:
+	BEQ $3, $1 LB1
 	J inicio
 LB1:
 	SW $3, 652($0)
 	J inicio
+	
+erro:
+	J erro
 
