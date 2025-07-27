@@ -1,13 +1,7 @@
-# Organização de Computadores - B
+# Computer Organization
 
-Este repositório contém os trabalhos da disciplina de Organização de Computadores - B.
+This repository is part of the Computer Organization class at UFRGS, taught by Professor Antônio Carlos Schneider Beck Filho. The assignments were made in groups of four students, in our case: [Eduarda Pereira](https://github.com/dudatess), [Gabriel Tavares](https://github.com/gct02), [Maximus da Rosa](https://github.com/maximusrosa) and [Nathan Guimarães](https://github.com/naguimaraes).
 
-## Trabalhos
+## Assignments
 
-1. Adicionar instruções em processadores MIPS
-
-- [Enunciado](Trabalho%201/Especificação%20do%20Trabalho%201%20-%20OrgB.pdf)
-- [Relatório]()
-- [Códigos para o Monociclo](Trabalho%201/Monociclo)
-- [Códigos para o Multiciclo](Trabalho%201/Multiciclo)
-- [Códigos para o Pipeline](Trabalho%201/Pipeline)
+1. Add instructions to MIPS processors. See more details in the [assignment 1 directory](./Assignment1/).
