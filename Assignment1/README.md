@@ -2,7 +2,7 @@
 
 This assignment aims to implement new instructions in the MIPS processor microarchitecture. Its specification can be found in [Specification.pdf](./Trabalho1/Especificacao.pdf), in Portuguese. The MIPS processor is a reduced instruction set computer (RISC) architecture widely used in embedded systems and personal computers. The final report, which details how the instructions were implemented and was written in Portuguese as well, can be found in [Report1.pdf](./Trabalho1/Relatorio.pdf).
 
-Our implementations were given a grade of 10/10 from Professor Antônio Carlos Schneider Beck Filho.
+Our implementations were given a grade of 10/10 from the professor.
 
 ## Processor Implementations
 
